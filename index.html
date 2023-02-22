@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>Chat+ By $xull</title>
+        <meta name="description" content="Chat+ By $xull" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b</p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+
+            <div id="chatbox"></div>
+
+            <from name="message" action="">
+                <input name="usermsg" type="text" id="usermsg" />
+                <input name=" submitmsg" type="submit" id="submitmsg" valvue="Send" />
+            </from>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // JQuery Document
+            $(document).ready(function () {});
+        </script>
+    </body>
+</html>
+<p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+<script type="text/javascript">
+
+    // jQuery Document
+    
+    $(document).ready(function(){
+    
+        //If user wants to end session
+    
+        $("#exit").click(function(){
+    
+            var exit = confirm("Are you sure you want to end the session?");
+    
+            if(exit==true){window.location = 'index.php?logout=true';}		
+    
+        });
+    
+    });
+    
+    </script>
+    
